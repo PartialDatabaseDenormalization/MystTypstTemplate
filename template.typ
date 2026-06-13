@@ -48,6 +48,21 @@
 [# if options.thesis_description #]
   thesis-description: [[-options.thesis_description-]],
 [# endif #]
+[# if options.matrikelnummer #]
+  matrikelnummer: "[-options.matrikelnummer-]",
+[# endif #]
+[# if options.studiengang #]
+  studiengang: "[-options.studiengang-]",
+[# endif #]
+[# if options.betreuer #]
+  betreuer: "[-options.betreuer-]",
+[# endif #]
+[# if options.ausgabedatum #]
+  ausgabedatum: "[-options.ausgabedatum-]",
+[# endif #]
+[# if options.abgabedatum #]
+  abgabedatum: "[-options.abgabedatum-]",
+[# endif #]
 )
 
 [-IMPORTS-]

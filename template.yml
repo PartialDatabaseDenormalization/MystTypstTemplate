@@ -35,7 +35,21 @@ options:
     description: |
       Multi-line description shown below the logo on the cover page,
       e.g. thesis type and institution name.
-      
+  - id: matrikelnummer
+    type: string
+    description: Student matriculation number shown on the cover page.
+  - id: studiengang
+    type: string
+    description: Degree program shown on the cover page.
+  - id: betreuer
+    type: string
+    description: Supervisor name shown on the cover page.
+  - id: ausgabedatum
+    type: string
+    description: Issue date shown on the cover page.
+  - id: abgabedatum
+    type: string
+    description: Submission date shown on the cover page.
 
 parts:
   - id: abstract

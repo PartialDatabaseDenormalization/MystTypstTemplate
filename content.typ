@@ -15,6 +15,11 @@
   bibliography-style: "ieee",
   cover-page: false,
   thesis-description: none,
+  matrikelnummer: none,
+  studiengang: none,
+  betreuer: none,
+  ausgabedatum: none,
+  abgabedatum: none,
   body
 ) = {
   let spacer = text(fill: gray)[#h(8pt) | #h(8pt)]
@@ -151,11 +156,11 @@
           stroke: none,
           row-gutter: 0.3em,
           [Vorgelegt von:],  [#h(1em) #authors.map(a => a.name).join(", ")],
-          [Matrikelnummer:], [#h(1em) 2160126],
-          [Studiengang:],    [#h(1em) Data Science],
-          [Betreuer:],       [#h(1em) Prof. Dr. Fabian Panse],
-          [Ausgabedatum:],   [#h(1em) 11.02.2026],
-          [Abgabedatum:],    [#h(1em) 11.05.2026],
+          ..if matrikelnummer != none {([Matrikelnummer:], [#h(1em) #matrikelnummer])},
+          ..if studiengang != none {([Studiengang:],    [#h(1em) #studiengang])},
+          ..if betreuer != none {([Betreuer:],       [#h(1em) #betreuer])},
+          ..if ausgabedatum != none {([Ausgabedatum:],   [#h(1em) #ausgabedatum])},
+          ..if abgabedatum != none {([Abgabedatum:],    [#h(1em) #abgabedatum])},
         )
       }
     )
