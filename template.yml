@@ -1,0 +1,47 @@
+jtex: v1
+kind: typst
+title: Bachelor thesis template
+description: Typst template for a bachelor thesis 
+template: template.typ
+files:
+  - template.typ
+  - content.typ
+authors:
+  - name: Tom Finke
+version: 0.0.1
+tags:
+  - thesis
+doc:
+  - id: title
+    required: true
+  - id: authors
+    required: true
+  - id: subtitle
+options:
+  - id: logo
+    type: file
+    description: An image path that is shown in the top right of the page
+  - id: heading_numbering
+    type: string
+    description: |
+      Heading numbering style. See https://typst.app/docs/reference/model/numbering/.
+  - id: cover_page
+    type: boolean
+    description: |
+      Whether to render a cover page as the first page (like a thesis title page).
+      Default is false.
+  - id: thesis_description
+    type: string
+    description: |
+      Multi-line description shown below the logo on the cover page,
+      e.g. thesis type and institution name.
+      
+
+parts:
+  - id: abstract
+    description: >
+      An abstract is a brief summary of a research article, thesis, review, conference proceeding, 
+      or any in-depth analysis of a particular subject 
+      and is often used to help the reader quickly ascertain the paper's purpose
+    max_words: 500
+    required: true
