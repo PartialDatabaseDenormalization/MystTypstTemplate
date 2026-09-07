@@ -71,6 +71,18 @@
       } else {
         text(fill: black)[#it]
       }
+    } else if type(it.dest) == str {
+      let matching = query(heading).filter(h => h.body == it.body)
+      if matching.len() > 0 {
+        let h = matching.first()
+        let levels = counter(heading).at(h.location())
+        let n = calc.min(h.level, levels.len())
+        let relevant = levels.slice(0, n)
+        let prefix = if h.level == 1 { [Chapter] } else { [Section] }
+        link(it.dest)[#text(fill: black)[#prefix #numbering(heading-numbering, ..relevant)]]
+      } else {
+        text(fill: black)[#it]
+      }
     } else {
       text(fill: black)[#it]
     }
