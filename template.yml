@@ -58,4 +58,4 @@ parts:
       or any in-depth analysis of a particular subject 
       and is often used to help the reader quickly ascertain the paper's purpose
     max_words: 500
-    required: true
+    required: false
